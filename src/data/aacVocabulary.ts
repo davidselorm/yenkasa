@@ -4,7 +4,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   // --- EMERGENCY & SAFETY (RED) ---
   {
     id: 'emg-help-now',
-    icon: '🚨',
+    icon: 'alert-triangle',
     category: 'emergency',
     colorKey: 'red',
     english: 'Help me right now!',
@@ -25,7 +25,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'emg-fall',
-    icon: '⚠️',
+    icon: 'alert-circle',
     category: 'emergency',
     colorKey: 'red',
     english: 'I fell down / I need assistance',
@@ -41,7 +41,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'emg-choke',
-    icon: '🫁',
+    icon: 'activity',
     category: 'emergency',
     colorKey: 'red',
     english: "I cannot breathe well",
@@ -57,7 +57,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'emg-stop',
-    icon: '🛑',
+    icon: 'shield-alert',
     category: 'emergency',
     colorKey: 'red',
     english: 'Stop that! Leave me alone',
@@ -75,7 +75,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   // --- GREETINGS & SOCIAL (PINK) ---
   {
     id: 'greet-morning',
-    icon: '🌅',
+    icon: 'sun-medium',
     category: 'greetings',
     colorKey: 'pink',
     english: 'Good Morning',
@@ -96,7 +96,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'greet-afternoon',
-    icon: '☀️',
+    icon: 'sun',
     category: 'greetings',
     colorKey: 'pink',
     english: 'Good Afternoon',
@@ -111,7 +111,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'greet-evening',
-    icon: '🌙',
+    icon: 'moon',
     category: 'greetings',
     colorKey: 'pink',
     english: 'Good Evening',
@@ -126,7 +126,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'greet-welcome',
-    icon: '🤝',
+    icon: 'handshake',
     category: 'greetings',
     colorKey: 'pink',
     english: 'Welcome!',
@@ -141,7 +141,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'greet-thank-you',
-    icon: '🙏',
+    icon: 'heart-handshake',
     category: 'greetings',
     colorKey: 'pink',
     english: 'Thank you very much',
@@ -161,7 +161,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'greet-please',
-    icon: '🤲',
+    icon: 'help-circle',
     category: 'greetings',
     colorKey: 'pink',
     english: 'Please / Excuse me',
@@ -176,7 +176,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'greet-how-are-you',
-    icon: '😊',
+    icon: 'smile',
     category: 'greetings',
     colorKey: 'pink',
     english: 'How are you doing?',
@@ -191,7 +191,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'greet-fine',
-    icon: '✨',
+    icon: 'check-circle-2',
     category: 'greetings',
     colorKey: 'pink',
     english: 'I am fine / All is well',
@@ -206,7 +206,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'greet-yes',
-    icon: '👍',
+    icon: 'thumbs-up',
     category: 'greetings',
     colorKey: 'green',
     english: 'Yes',
@@ -221,7 +221,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'greet-no',
-    icon: '👎',
+    icon: 'thumbs-down',
     category: 'greetings',
     colorKey: 'red',
     english: 'No',
@@ -238,7 +238,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   // --- FOOD & DRINKS (AMBER/ORANGE) ---
   {
     id: 'food-water',
-    icon: '💧',
+    icon: 'droplets',
     category: 'food',
     colorKey: 'orange',
     english: 'Water to drink',
@@ -253,7 +253,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'food-cold-water',
-    icon: '🧊',
+    icon: 'sparkles',
     category: 'food',
     colorKey: 'orange',
     english: 'Chilled / Cold Water',
@@ -268,7 +268,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'food-waakye',
-    icon: '🍛',
+    icon: 'utensils',
     category: 'food',
     colorKey: 'orange',
     english: 'Waakye with Shito & Egg',
@@ -283,7 +283,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'food-jollof',
-    icon: '🍲',
+    icon: 'soup',
     category: 'food',
     colorKey: 'orange',
     english: 'Ghana Jollof Rice',
@@ -298,7 +298,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'food-fufu',
-    icon: '🥣',
+    icon: 'coffee',
     category: 'food',
     colorKey: 'orange',
     english: 'Fufu and Light Soup / Abenkwan',
@@ -313,7 +313,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'food-banku',
-    icon: '🐟',
+    icon: 'utensils-crossed',
     category: 'food',
     colorKey: 'orange',
     english: 'Banku and Grilled Tilapia',
@@ -328,7 +328,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'food-koko',
-    icon: '☕',
+    icon: 'cup-soda',
     category: 'food',
     colorKey: 'orange',
     english: 'Hausa Koko & Koose / Bofrot',
@@ -343,7 +343,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'food-hungry',
-    icon: '🍽️',
+    icon: 'clock',
     category: 'food',
     colorKey: 'blue',
     english: 'I am hungry / I want to eat',
@@ -360,7 +360,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   // --- HEALTH & BODY (GREEN/EMERALD) ---
   {
     id: 'hlth-headache',
-    icon: '🤕',
+    icon: 'heart-pulse',
     category: 'health',
     colorKey: 'blue',
     english: 'I have a severe headache',
@@ -375,7 +375,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'hlth-stomach',
-    icon: '🤢',
+    icon: 'stethoscope',
     category: 'health',
     colorKey: 'blue',
     english: 'My stomach / tummy hurts',
@@ -390,7 +390,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'hlth-medicine',
-    icon: '💊',
+    icon: 'pill',
     category: 'health',
     colorKey: 'green',
     english: 'It is time for my medication',
@@ -405,7 +405,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'hlth-doctor',
-    icon: '🩺',
+    icon: 'heart',
     category: 'health',
     colorKey: 'green',
     english: 'Call the doctor / nurse',
@@ -420,7 +420,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'hlth-dizzy',
-    icon: '🌀',
+    icon: 'zap',
     category: 'health',
     colorKey: 'blue',
     english: 'I feel dizzy / weak',
@@ -435,7 +435,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'hlth-sleep',
-    icon: '😴',
+    icon: 'bed-double',
     category: 'health',
     colorKey: 'blue',
     english: 'I need to rest and sleep',
@@ -452,7 +452,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   // --- DAILY NEEDS (SKY BLUE) ---
   {
     id: 'need-washroom',
-    icon: '🚻',
+    icon: 'door-open',
     category: 'needs',
     colorKey: 'blue',
     english: 'I need to use the washroom / toilet',
@@ -467,7 +467,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'need-cold',
-    icon: '🥶',
+    icon: 'thermometer-snowflake',
     category: 'needs',
     colorKey: 'blue',
     english: 'I am feeling cold / cover me',
@@ -482,7 +482,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'need-hot',
-    icon: '🥵',
+    icon: 'flame',
     category: 'needs',
     colorKey: 'blue',
     english: 'I feel very hot / turn on fan',
@@ -497,7 +497,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'need-phone',
-    icon: '📱',
+    icon: 'phone',
     category: 'needs',
     colorKey: 'orange',
     english: 'Pass me my phone',
@@ -514,7 +514,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   // --- TRANSIT & TROTRO (INDIGO) ---
   {
     id: 'tr-mate-stop',
-    icon: '🚐',
+    icon: 'bus',
     category: 'transit',
     colorKey: 'orange',
     english: 'Mate, I will alight here! Stop!',
@@ -533,7 +533,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'tr-drop-front',
-    icon: '⏩',
+    icon: 'fast-forward',
     category: 'transit',
     colorKey: 'orange',
     english: 'Move a bit forward before stopping',
@@ -548,7 +548,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'tr-fare-howmuch',
-    icon: '💵',
+    icon: 'banknote',
     category: 'transit',
     colorKey: 'orange',
     english: 'How much is the trotro fare?',
@@ -563,7 +563,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'tr-circle',
-    icon: '🏙️',
+    icon: 'map-pin',
     category: 'transit',
     colorKey: 'orange',
     english: 'Circle / Kwame Nkrumah Interchange',
@@ -578,7 +578,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'tr-change',
-    icon: '🪙',
+    icon: 'coins',
     category: 'transit',
     colorKey: 'orange',
     english: 'I have small money / exact change',
@@ -595,7 +595,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   // --- MARKET & COMMERCE (TEAL) ---
   {
     id: 'mkt-howmuch',
-    icon: '🏷️',
+    icon: 'tag',
     category: 'market',
     colorKey: 'orange',
     english: 'How much does this cost?',
@@ -610,7 +610,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'mkt-reduce',
-    icon: '✂️',
+    icon: 'percent',
     category: 'market',
     colorKey: 'green',
     english: 'Please discount or reduce the price',
@@ -625,7 +625,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'mkt-momo',
-    icon: '📲',
+    icon: 'credit-card',
     category: 'market',
     colorKey: 'orange',
     english: 'Can I pay you via MTN MoMo / Telecel Cash?',
@@ -642,7 +642,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   // --- FAMILY & PEOPLE (PURPLE/YELLOW) ---
   {
     id: 'fam-mother',
-    icon: '👩',
+    icon: 'user',
     category: 'family',
     colorKey: 'yellow',
     english: 'Mother / Mom',
@@ -657,7 +657,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'fam-father',
-    icon: '👨',
+    icon: 'user-check',
     category: 'family',
     colorKey: 'yellow',
     english: 'Father / Dad',
@@ -672,7 +672,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'fam-child',
-    icon: '🧒',
+    icon: 'baby',
     category: 'family',
     colorKey: 'yellow',
     english: 'My Child / Baby',
@@ -687,7 +687,7 @@ export const INITIAL_AAC_VOCABULARY: AACTile[] = [
   },
   {
     id: 'fam-caregiver',
-    icon: '🧑‍⚕️',
+    icon: 'users',
     category: 'family',
     colorKey: 'yellow',
     english: 'My Caregiver / Assistant',

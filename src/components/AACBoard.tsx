@@ -12,6 +12,7 @@ import {
   VolumeX,
   Share2
 } from 'lucide-react';
+import { StandardIcon } from './StandardIcon';
 import { AACTile, GhanaianLanguage, AACCategory, AccessibilitySettings, TTSConfig } from '../types';
 import { AAC_CATEGORIES } from '../data/languages';
 import { audioEngine } from '../services/audioEngine';
@@ -175,15 +176,15 @@ export const AACBoard: React.FC<AACBoardProps> = ({
         <div className="min-h-[72px] flex items-center flex-wrap gap-2 p-2 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-dashed border-slate-300 dark:border-slate-700">
           {sentenceTiles.length === 0 ? (
             <div className="text-slate-400 dark:text-slate-500 text-sm font-medium italic flex items-center gap-2 px-2">
-              <span>👉 Tap tiles below to build a sentence in Ghanaian languages, or click Speak</span>
+              <span>Select cards below to compose phrases in Ghanaian languages, or click Speak</span>
             </div>
           ) : (
             sentenceTiles.map((tile, idx) => (
               <div 
                 key={`${tile.id}-${idx}`}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 shadow-sm animate-in fade-in zoom-in-95 duration-150"
+                className="flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-600 shadow-sm animate-in fade-in zoom-in-95 duration-150"
               >
-                <span className="text-xl">{tile.icon}</span>
+                <StandardIcon name={tile.icon} className="w-4 h-4 text-slate-700 dark:text-slate-200" />
                 <span className="font-bold text-sm text-slate-800 dark:text-slate-100">
                   {tile.translations[currentLanguage] || tile.translations['twi-asante']}
                 </span>
@@ -206,7 +207,7 @@ export const AACBoard: React.FC<AACBoardProps> = ({
             className="flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-gradient-to-r from-emerald-600 via-teal-600 to-green-600 hover:from-emerald-700 hover:to-green-700 text-white font-extrabold text-sm sm:text-base shadow-md disabled:opacity-40 transition active:scale-95"
           >
             <Volume2 className="w-5 h-5" />
-            <span>Speak Full Sentence 🔊</span>
+            <span>Speak Full Sentence</span>
           </button>
         </div>
       </div>
@@ -272,9 +273,9 @@ export const AACBoard: React.FC<AACBoardProps> = ({
                 )}
               </div>
 
-              {/* Icon / Emoji */}
-              <div className="text-3xl sm:text-4xl my-1 group-hover:scale-110 transition-transform">
-                {tile.icon}
+              {/* Standard Icon */}
+              <div className="my-2 group-hover:scale-110 transition-transform flex items-center justify-center">
+                <StandardIcon name={tile.icon} className="w-8 h-8 sm:w-10 sm:h-10 text-slate-800 dark:text-slate-100" />
               </div>
 
               {/* Local Ghanaian Translation */}

@@ -70,7 +70,7 @@ export const Header: React.FC<HeaderProps> = ({
                 <h1 className="text-xl sm:text-2xl font-black tracking-tight flex items-center gap-1.5">
                   <span>Yenkasa</span>
                   <span className="text-xs font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-700">
-                    Ghana 🇬🇭
+                    Ghana
                   </span>
                 </h1>
                 {isSwitchScanningActive && (
@@ -116,7 +116,7 @@ export const Header: React.FC<HeaderProps> = ({
             >
               {SUPPORTED_LANGUAGES.map((lang) => (
                 <option key={lang.id} value={lang.id} className="text-slate-900 bg-white dark:bg-slate-900 dark:text-white">
-                  🇬🇭 {lang.name} ({lang.localName})
+                  {lang.name} ({lang.localName})
                 </option>
               ))}
             </select>

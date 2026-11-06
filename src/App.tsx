@@ -32,6 +32,9 @@ import { voiceBankingService } from './services/voiceBanking';
 import { audioEngine } from './services/audioEngine';
 import { 
   AlertTriangle, 
+  AlertCircle,
+  Activity,
+  Compass,
   Sparkles, 
   Volume2, 
   Heart, 
@@ -158,8 +161,8 @@ export const App: React.FC = () => {
         {/* Region & Cultural Context Banner */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 p-4 rounded-2xl bg-gradient-to-r from-amber-500/10 via-emerald-500/10 to-rose-500/10 border border-amber-500/20">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-600 dark:text-amber-400 flex items-center justify-center font-black text-lg">
-              🇬🇭
+            <div className="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold">
+              <Compass className="w-5 h-5 text-amber-600 dark:text-amber-400" />
             </div>
             <div>
               <div className="flex items-center gap-2">
@@ -182,7 +185,7 @@ export const App: React.FC = () => {
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-bold shadow-sm hover:bg-slate-50 transition active:scale-95"
             >
               <Volume2 className="w-3.5 h-3.5 text-amber-500" />
-              <span>Listen to Dialect 🔊</span>
+              <span>Listen to Dialect</span>
             </button>
           </div>
         </div>
@@ -208,21 +211,24 @@ export const App: React.FC = () => {
           <div className="flex items-center flex-wrap gap-2 w-full sm:w-auto">
             <button
               onClick={() => audioEngine.speak('Boa me ntɛm ara!', currentLanguage, { ...ttsConfig, repeatPhrase: true })}
-              className="flex-1 sm:flex-none px-3 py-1.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-extrabold text-xs shadow-sm transition active:scale-95"
+              className="flex-1 sm:flex-none flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-extrabold text-xs shadow-sm transition active:scale-95"
             >
-              🚨 Help Now! (Boa me!)
+              <AlertTriangle className="w-3.5 h-3.5" />
+              <span>Help Now (Boa me!)</span>
             </button>
             <button
               onClick={() => audioEngine.speak('M’ahwe fam, boa me!', currentLanguage, ttsConfig)}
-              className="flex-1 sm:flex-none px-3 py-1.5 rounded-xl bg-rose-700 hover:bg-rose-800 text-white font-bold text-xs shadow-sm transition active:scale-95"
+              className="flex-1 sm:flex-none flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-xl bg-rose-700 hover:bg-rose-800 text-white font-bold text-xs shadow-sm transition active:scale-95"
             >
-              ⚠️ I Fell Down!
+              <AlertCircle className="w-3.5 h-3.5" />
+              <span>I Fell Down</span>
             </button>
             <button
               onClick={() => audioEngine.speak('Mentumi nnye me home yie', currentLanguage, ttsConfig)}
-              className="flex-1 sm:flex-none px-3 py-1.5 rounded-xl bg-rose-800 hover:bg-rose-900 text-white font-bold text-xs shadow-sm transition active:scale-95"
+              className="flex-1 sm:flex-none flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-xl bg-rose-800 hover:bg-rose-900 text-white font-bold text-xs shadow-sm transition active:scale-95"
             >
-              🫁 Breathing Issue
+              <Activity className="w-3.5 h-3.5" />
+              <span>Breathing Issue</span>
             </button>
           </div>
         </div>

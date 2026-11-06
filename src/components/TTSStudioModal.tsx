@@ -136,7 +136,7 @@ export const TTSStudioModal: React.FC<TTSStudioModalProps> = ({
             >
               {SUPPORTED_LANGUAGES.map((lang) => (
                 <option key={lang.id} value={lang.id}>
-                  🇬🇭 {lang.name} ({lang.dialect})
+                  {lang.name} ({lang.dialect})
                 </option>
               ))}
             </select>
@@ -294,7 +294,7 @@ export const TTSStudioModal: React.FC<TTSStudioModalProps> = ({
               className="flex-1 py-3.5 rounded-2xl bg-gradient-to-r from-emerald-600 via-teal-600 to-green-600 hover:from-emerald-700 hover:to-green-700 text-white font-extrabold text-base shadow-md flex items-center justify-center gap-2 transition active:scale-98 disabled:opacity-50"
             >
               <Play className="w-5 h-5 fill-white" />
-              <span>{isPlaying ? 'Synthesizing...' : 'Synthesize & Speak Aloud 🔊'}</span>
+              <span>{isPlaying ? 'Synthesizing...' : 'Synthesize & Speak Aloud'}</span>
             </button>
 
             {isPlaying && (

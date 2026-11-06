@@ -12,6 +12,7 @@ import {
   Sparkles,
   Volume2
 } from 'lucide-react';
+import { StandardIcon } from './StandardIcon';
 import { GhanaianLanguage, CustomVoiceBankCard } from '../types';
 import { voiceBankingService } from '../services/voiceBanking';
 import { SUPPORTED_LANGUAGES } from '../data/languages';
@@ -32,14 +33,14 @@ export const VoiceBankingModal: React.FC<VoiceBankingModalProps> = ({
   const [cards, setCards] = useState<CustomVoiceBankCard[]>(voiceBankingService.getCards());
   const [englishText, setEnglishText] = useState('');
   const [ghanaianText, setGhanaianText] = useState('');
-  const [selectedIcon, setSelectedIcon] = useState('⭐');
+  const [selectedIcon, setSelectedIcon] = useState('star');
   const [isRecording, setIsRecording] = useState(false);
   const [recordedAudioUrl, setRecordedAudioUrl] = useState<string | null>(null);
 
   const mediaRecorderRef = React.useRef<MediaRecorder | null>(null);
   const audioChunksRef = React.useRef<Blob[]>([]);
 
-  const iconOptions = ['⭐', '🏠', '❤️', '📍', '💳', '🍲', '🩺', '👨‍👩‍👧', '🚌', '📞', '🙏'];
+  const iconOptions = ['star', 'home', 'heart', 'map-pin', 'credit-card', 'utensils', 'stethoscope', 'users', 'bus', 'phone', 'help-circle'];
 
   // Start voice banking recording
   const handleStartRecording = async () => {
@@ -166,18 +167,18 @@ export const VoiceBankingModal: React.FC<VoiceBankingModalProps> = ({
             {/* Icon Picker */}
             <div className="flex items-center gap-2">
               <span className="text-xs font-semibold text-slate-500">Card Icon:</span>
-              <div className="flex items-center gap-1 overflow-x-auto pb-1">
+              <div className="flex items-center gap-1.5 overflow-x-auto pb-1">
                 {iconOptions.map((icon) => (
                   <button
                     key={icon}
                     onClick={() => setSelectedIcon(icon)}
-                    className={`w-8 h-8 rounded-lg text-lg flex items-center justify-center border transition ${
+                    className={`w-8 h-8 rounded-lg flex items-center justify-center border transition ${
                       selectedIcon === icon 
-                        ? 'border-purple-600 bg-white dark:bg-slate-800 scale-110 shadow-sm' 
-                        : 'border-transparent hover:bg-purple-100 dark:hover:bg-purple-900/40'
+                        ? 'border-purple-600 bg-white dark:bg-slate-800 scale-110 shadow-sm text-purple-600' 
+                        : 'border-transparent text-slate-500 hover:bg-purple-100 dark:hover:bg-purple-900/40'
                     }`}
                   >
-                    {icon}
+                    <StandardIcon name={icon} className="w-4 h-4" />
                   </button>
                 ))}
               </div>
@@ -269,7 +270,7 @@ export const VoiceBankingModal: React.FC<VoiceBankingModalProps> = ({
                   className="flex items-center justify-between p-3 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm"
                 >
                   <div className="flex items-center gap-3">
-                    <span className="text-2xl">{c.icon}</span>
+                    <StandardIcon name={c.icon} className="w-6 h-6 text-purple-600 dark:text-purple-300" />
                     <div>
                       <div className="text-sm font-bold text-slate-900 dark:text-slate-100">
                         {c.translations[currentLanguage] || c.translations['twi-asante']}

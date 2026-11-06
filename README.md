@@ -1,82 +1,95 @@
-# Yenkasa (Yɛnkasa) 🇬🇭🗣️
-### Inclusive Assistive Speech Recognition (ASR) & Text-to-Speech (TTS) Platform for Ghanaian Languages
+# Yenkasa (Yɛnkasa)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)](LICENSE)
-[![Ghanaian Languages](https://img.shields.io/badge/Languages-Akan%20%7C%20Ga%20%7C%20Ewe%20%7C%20Dagbani%20%7C%20Fante-gold.svg)](#supported-languages)
-[![Accessibility](https://img.shields.io/badge/Accessibility-WCAG%20AAA%20%7C%20Switch%20Access-blue.svg)](#accessibility)
-[![Status](https://img.shields.io/badge/Status-Active%20Development-success.svg)](#)
+An assistive communication app that helps individuals with speech difficulties speak and communicate in Ghanaian languages.
 
-> **"Yɛnkasa"** is Akan (Twi) for *"Let's Talk"* or *"We Shall Speak"*.
+In the Akan language, **"Yɛnkasa"** means **"Let's Talk"**.
 
-**Yenkasa** is an assistive speech technology platform designed specifically for individuals with speech impairment, non-verbal conditions, and dysarthria in Ghana and across the West African diaspora. By combining **culturally contextual Augmentative and Alternative Communication (AAC)**, **indigenous Ghanaian Text-to-Speech (TTS)** synthesis, and **dysarthric/atypical Automatic Speech Recognition (ASR) "Speech Repair"**, Yenkasa bridges communication barriers in everyday Ghanaian life—from trotro stations and vibrant open markets to family living rooms and healthcare clinics.
+**Live Demo:** [https://yenkasa.vercel.app](https://yenkasa.vercel.app)
 
 ---
 
-## 🌟 The Challenge & Context
+## What is Yenkasa?
 
-Traditional speech-assistive devices and AAC software (e.g., Tobii Dynavox, Proloquo2Go) suffer from three critical bottlenecks in the Ghanaian context:
+Most speech apps only work in English and use foreign concepts like hotdogs, subways, and baseball. For someone in Ghana recovering from a stroke or living with conditions like cerebral palsy or ALS, those tools do not help them talk to their family, buy food at the market, or take a trotro.
 
-1. **Western Linguistic Bias**: They speak robotic American or British English. There is virtually zero native support for **Asante Twi, Akuapem Twi, Fante, Ga, Ewe, or Dagbani**.
-2. **Cultural Disconnect**: Built-in visual symbol vocabularies depict hotdogs, baseball, and subway trains—not *Waakye*, *Trotro*, *Kenkey*, *Chorkor*, *Kente*, or local greeting rituals (*"Mema wo akye"*, *"Akpe na wò"*).
-3. **Dysarthria & Slurred Speech Failure**: Conventional ASR engines (Google Assistant, Siri, standard Whisper) instantly reject dysarthric speech, spastic pauses, and low-volume tonal approximations common in stroke survivors, cerebral palsy, and ALS patients.
-
-**Yenkasa solves all three.**
+**Yenkasa** changes that. It gives people with speech impairments a voice in their own native Ghanaian language.
 
 ---
 
-## 🚀 Key Innovations & Pillars
+## Key Features
 
-- 🗣️ **Ghanaian Native TTS Synthesizer**: Natural voice generation supporting tonal markers (ɔ, ɛ, ŋ, ɖ, ʋ) and indigenous phonemes for Akan, Ga, Ewe, and Dagbani.
-- 🧩 **Culturally Grounded AAC Grid**: Over 180+ localized communication tiles organized by Fitzgerald Key standards (Food, Health, Emergencies, Trotro/Transport, Market, Family).
-- 🎙️ **Dysarthric ASR & Speech Repair**: Acoustic feature calibration adapting to individual vocal distortions and repairing slurred vocalizations into fluent Ghanaian speech.
-- 🔄 **Two-Way Dialogue Bridge**: Translates caregiver speech into visual tiles/text, and converts user tiles/gestures into crystal-clear spoken Ghanaian audio.
-- ♿ **Assistive Hardware Ready**: Dwell-click timers for eye-tracking/head-pointing, single-key Switch Access scanning, and high-contrast WCAG AAA visual themes.
-- 📶 **Offline-First PWA**: Zero-data local speech engine ensuring reliable operation in rural clinics and remote Ghanaian communities.
+### 1. Ghanaian Communication Board (AAC)
+- Tap picture cards to speak everyday Ghanaian words and phrases.
+- Includes everyday local topics:
+  - **Food**: Waakye, Jollof, Fufu, Banku, Koko.
+  - **Transport**: Trotro stops (*"Mate! Gyina ha!"*), Circle, Kejetia, bus fare.
+  - **Greetings**: Good morning (*Mema wo akye*), Thank you (*Medase*), Welcome (*Akwaaba*).
+  - **Health & Safety**: Pain levels, medicine reminders, and instant emergency alerts.
+- Build full sentences word-by-word and tap **Speak Full Sentence** to hear it spoken aloud.
 
----
+### 2. Speech Clarifier (Speech Repair)
+- For people who can make vocal sounds, but whose speech is slurred, quiet, or hard to understand.
+- Listens to vocal approximations, matches the sound pattern, and speaks out the clear, intended Ghanaian phrase.
+- Includes a quick calibration wizard to adapt to each person's unique voice.
 
-## 🇬🇭 Supported Languages
+### 3. Ghanaian Text-to-Speech (TTS) Studio
+- Type any sentence in Akan, Ga, Ewe, or Dagbani and listen to it spoken with natural pronunciation.
+- Correctly pronounces Ghanaian vowels like **ɛ** and **ɔ**, as well as local speech tones.
+- Adjust speaking speed and voice pitch for comfort.
 
-| Language | Dialect / Variant | TTS Engine | ASR / Speech Repair | AAC Grid |
-|---|---|---|---|---|
-| **Akan (Twi)** | Asante Twi | ✅ Active | ✅ Calibrated | ✅ Full |
-| **Akan (Twi)** | Akuapem Twi | ✅ Active | ✅ Calibrated | ✅ Full |
-| **Fante** | Mfantse | ✅ Active | ✅ Calibrated | ✅ Full |
-| **Gã** | Greater Accra Ga | ✅ Active | ✅ Calibrated | ✅ Full |
-| **Ewe (Èʋegbe)** | Anlo / Tongu / Vedome | ✅ Active | ✅ Calibrated | ✅ Full |
-| **Dagbani** | Northern Ghana Dagbani | ✅ Active | ✅ Calibrated | ✅ Full |
+### 4. Two-Way Conversation Bridge
+- Designed for real conversations between the user and a doctor, nurse, or market vendor.
+- The conversation partner can speak into the microphone, and their speech appears as large, readable text on screen.
+- The user can tap quick-reply cards to speak back aloud.
 
----
+### 5. Voice Banking & Custom Phrases
+- Save personal cards like your name, phone number, Mobile Money details, or home address.
+- Record audio clips of your own voice or family members' voices to save for future use.
 
-## 💻 Tech Architecture
-
-Built with modern, lightweight web technologies for instant responsiveness on low-cost smartphones, tablets, and desktop setups:
-
-- **Frontend**: Vite, React 19, TypeScript, Tailwind CSS, Lucide Icons, Canvas Audio Visualizer
-- **Speech Engine**: Web Audio API Formant & Phoneme Synthesizer + Native Audio Soundbank + Khaya/MMS Cloud Bridge
-- **Acoustic ASR**: Spectral Centroid & Zero-Crossing Rate Acoustic Matcher with Dysarthria Calibration
-- **Storage**: IndexedDB & LocalStorage for offline voice banking and personalized phrases
-
----
-
-## 🛠️ Quick Start
-
-```bash
-# Clone the repository
-git clone https://github.com/davidselorm/yenkasa.git
-
-# Navigate into project directory
-cd yenkasa
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-```
+### 6. Built for Accessibility
+- **Switch Access**: Automatically steps through cards so users who cannot touch the screen can select cards using a single button, spacebar, or switch.
+- **Eye-Tracking Ready (Dwell Clicking)**: Hovering over a card triggers it automatically without needing to click.
+- **High Contrast Themes**: Includes Light, Dark OLED, and a High-Contrast Yellow/Black theme for visual clarity.
+- **Works Offline**: Operates reliably even without an active internet connection.
 
 ---
 
-## 📄 License
+## Supported Ghanaian Languages
 
-Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
+- **Asante Twi** (Akan)
+- **Akuapem Twi** (Akan)
+- **Fante** (Mfantse)
+- **Gã** (Greater Accra)
+- **Ewe** (Èʋegbe)
+- **Dagbani** (Dagbanli)
+
+---
+
+## Getting Started
+
+### Run Locally
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/davidselorm/yenkasa.git
+   cd yenkasa
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open in your browser:**
+   Open [http://localhost:3000](http://localhost:3000) to use the app.
+
+---
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.

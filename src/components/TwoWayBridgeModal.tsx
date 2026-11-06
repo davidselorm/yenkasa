@@ -198,7 +198,7 @@ export const TwoWayBridgeModal: React.FC<TwoWayBridgeModalProps> = ({
                       title="Speak phrase aloud"
                     >
                       <Volume2 className="w-3.5 h-3.5" />
-                      <span>Hear 🔊</span>
+                      <span>Hear</span>
                     </button>
                   </div>
                 </div>
@@ -267,7 +267,7 @@ export const TwoWayBridgeModal: React.FC<TwoWayBridgeModalProps> = ({
                 }`}
               >
                 <Mic className="w-4 h-4" />
-                <span>{isPartnerListening ? 'Listening to Partner...' : 'Tap for Partner to Speak 🎙️'}</span>
+                <span>{isPartnerListening ? 'Listening to Partner...' : 'Tap for Partner to Speak'}</span>
               </button>
             </div>
           </div>

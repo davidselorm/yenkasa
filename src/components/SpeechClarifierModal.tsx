@@ -255,7 +255,7 @@ export const SpeechClarifierModal: React.FC<SpeechClarifierModalProps> = ({
                 className="w-full py-4 rounded-2xl bg-rose-600 hover:bg-rose-700 text-white font-black text-base sm:text-lg shadow-lg flex items-center justify-center gap-2.5 transition active:scale-98 animate-pulse"
               >
                 <Square className="w-6 h-6 fill-white" />
-                <span>Stop & Run Speech Repair ⚡</span>
+                <span>Stop & Run Speech Repair</span>
               </button>
             )}
             <span className="text-[11px] text-slate-500 dark:text-slate-400">

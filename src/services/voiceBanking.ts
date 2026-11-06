@@ -24,7 +24,7 @@ class VoiceBankingService {
     this.cards = [
       {
         id: 'custom-bank-name',
-        icon: '⭐',
+        icon: 'star',
         category: 'greetings',
         english: 'My name is Kofi Selorm',
         translations: {
@@ -39,7 +39,7 @@ class VoiceBankingService {
       },
       {
         id: 'custom-bank-momo-pin',
-        icon: '🔒',
+        icon: 'lock',
         category: 'market',
         english: 'Please confirm the MoMo transaction on my phone',
         translations: {
@@ -79,7 +79,7 @@ class VoiceBankingService {
   ): CustomVoiceBankCard {
     const newCard: CustomVoiceBankCard = {
       id: `custom-${Date.now()}`,
-      icon: icon || '💬',
+      icon: icon || 'message-square',
       category: 'needs',
       english,
       translations,
