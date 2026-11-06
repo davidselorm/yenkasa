@@ -83,6 +83,7 @@ export interface TTSConfig {
   voiceGender: 'female' | 'male' | 'child';
   engineMode: 'hybrid-formant' | 'browser-speech' | 'cloud-api';
   repeatPhrase: boolean;
+  speakEnglishSubtitle?: boolean; // Also speak English meaning for complete clarity
 }
 
 export interface AccessibilitySettings {

@@ -52,7 +52,7 @@ export const AACBoard: React.FC<AACBoardProps> = ({
   const handleCardClick = (tile: AACTile) => {
     setSentenceTiles(prev => [...prev, tile]);
     const textToSpeak = tile.translations[currentLanguage] || tile.translations['twi-asante'];
-    audioEngine.speak(textToSpeak, currentLanguage, ttsConfig);
+    audioEngine.speak(textToSpeak, currentLanguage, ttsConfig, tile.english);
     onTileSelect(tile);
 
     // Haptic feedback if enabled and supported
@@ -86,8 +86,9 @@ export const AACBoard: React.FC<AACBoardProps> = ({
     const fullSentence = sentenceTiles
       .map(t => t.translations[currentLanguage] || t.translations['twi-asante'])
       .join(' ');
+    const fullEnglish = sentenceTiles.map(t => t.english).join(' ');
 
-    audioEngine.speak(fullSentence, currentLanguage, ttsConfig);
+    audioEngine.speak(fullSentence, currentLanguage, ttsConfig, fullEnglish);
   };
 
   // Clear sentence

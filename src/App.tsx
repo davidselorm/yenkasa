@@ -48,14 +48,15 @@ export const App: React.FC = () => {
   const [currentLanguage, setCurrentLanguage] = useState<GhanaianLanguage>('twi-asante');
   const [customTiles, setCustomTiles] = useState<AACTile[]>(voiceBankingService.getAsAACTiles());
   
-  // TTS configuration
+  // TTS configuration: Default to clear spoken human voice
   const [ttsConfig, setTtsConfig] = useState<TTSConfig>({
     speed: 1.0,
     pitch: 1.0,
     volume: 1.0,
     voiceGender: 'female',
-    engineMode: 'hybrid-formant',
-    repeatPhrase: false
+    engineMode: 'browser-speech',
+    repeatPhrase: false,
+    speakEnglishSubtitle: true
   });
 
   // Accessibility settings
@@ -210,21 +211,21 @@ export const App: React.FC = () => {
 
           <div className="flex items-center flex-wrap gap-2 w-full sm:w-auto">
             <button
-              onClick={() => audioEngine.speak('Boa me ntɛm ara!', currentLanguage, { ...ttsConfig, repeatPhrase: true })}
+              onClick={() => audioEngine.speak('Boa me ntɛm ara!', currentLanguage, { ...ttsConfig, repeatPhrase: true }, 'Help me right now!')}
               className="flex-1 sm:flex-none flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-extrabold text-xs shadow-sm transition active:scale-95"
             >
               <AlertTriangle className="w-3.5 h-3.5" />
               <span>Help Now (Boa me!)</span>
             </button>
             <button
-              onClick={() => audioEngine.speak('M’ahwe fam, boa me!', currentLanguage, ttsConfig)}
+              onClick={() => audioEngine.speak('M’ahwe fam, boa me!', currentLanguage, ttsConfig, 'I fell down, help me!')}
               className="flex-1 sm:flex-none flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-xl bg-rose-700 hover:bg-rose-800 text-white font-bold text-xs shadow-sm transition active:scale-95"
             >
               <AlertCircle className="w-3.5 h-3.5" />
               <span>I Fell Down</span>
             </button>
             <button
-              onClick={() => audioEngine.speak('Mentumi nnye me home yie', currentLanguage, ttsConfig)}
+              onClick={() => audioEngine.speak('Mentumi nnye me home yie', currentLanguage, ttsConfig, 'I cannot breathe well')}
               className="flex-1 sm:flex-none flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-xl bg-rose-800 hover:bg-rose-900 text-white font-bold text-xs shadow-sm transition active:scale-95"
             >
               <Activity className="w-3.5 h-3.5" />

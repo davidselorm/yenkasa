@@ -272,18 +272,32 @@ export const TTSStudioModal: React.FC<TTSStudioModalProps> = ({
               </div>
             </div>
 
-            {/* Repeat Phrase Toggle */}
-            <label className="flex items-center gap-2 cursor-pointer pt-1">
-              <input
-                type="checkbox"
-                checked={ttsConfig.repeatPhrase}
-                onChange={(e) => onTTSConfigChange({ ...ttsConfig, repeatPhrase: e.target.checked })}
-                className="w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500"
-              />
-              <span className="text-xs font-medium text-slate-700 dark:text-slate-300">
-                Repeat phrase twice (recommended for noisy markets / trotro stations)
-              </span>
-            </label>
+            {/* Repeat Phrase & Bilingual Subtitle Toggles */}
+            <div className="space-y-2 pt-1">
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={ttsConfig.speakEnglishSubtitle ?? true}
+                  onChange={(e) => onTTSConfigChange({ ...ttsConfig, speakEnglishSubtitle: e.target.checked })}
+                  className="w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500"
+                />
+                <span className="text-xs font-semibold text-slate-700 dark:text-slate-300">
+                  Speak English translation alongside Ghanaian dialect (e.g. &ldquo;Mema wo akye. Good morning&rdquo;)
+                </span>
+              </label>
+
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={ttsConfig.repeatPhrase}
+                  onChange={(e) => onTTSConfigChange({ ...ttsConfig, repeatPhrase: e.target.checked })}
+                  className="w-4 h-4 rounded text-emerald-600 focus:ring-emerald-500"
+                />
+                <span className="text-xs font-medium text-slate-700 dark:text-slate-300">
+                  Repeat phrase twice (recommended for noisy markets / trotro stations)
+                </span>
+              </label>
+            </div>
           </div>
 
           {/* Action Buttons */}
